@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cultural Cities of Afghanistan</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --brown:#8B4513;
+  --gold:#DAA520;
+  --beige:#F5F5DC;
+}
+
+* { box-sizing: border-box; margin:0; padding:0; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--beige);
+  color:#333;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  background: linear-gradient(to right, var(--brown), var(--gold));
+  color:white;
+  text-align:center;
+  padding:50px 20px;
+}
+
+header h1 {
+  font-family:'Noto Serif', serif;
+  font-size:3rem;
+}
+
+header p {
+  margin-top:10px;
+  animation: fadeIn 2.5s ease-in;
+}
+
+nav {
+  margin-top:20px;
+}
+
+nav a {
+  color:white;
+  text-decoration:none;
+  margin:0 15px;
+  font-weight:bold;
+}
+
+nav a:hover { color:var(--beige); }
+
+@keyframes fadeIn {
+  from {opacity:0;}
+  to {opacity:1;}
+}
+
+section {
+  padding:60px 10%;
+}
+
+h2 {
+  text-align:center;
+  font-family:'Noto Serif', serif;
+  color:var(--brown);
+  margin-bottom:30px;
+}
+
+/* ---------- GALLERY ---------- */
+.gallery {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
+  gap:25px;
+}
+
+.city-card {
+  background:white;
+  border-radius:12px;
+  overflow:hidden;
+  transition: transform .4s, box-shadow .4s;
+}
+
+.city-card:hover {
+  transform:scale(1.05);
+  box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+.city-card img {
+  width:100%;
+  height:160px;
+  object-fit:cover;
+}
+
+.city-card div {
+  padding:15px;
+}
+
+.city-card h3 {
+  color:var(--brown);
+  margin-bottom:8px;
+}
+/* ---------- CITY OF THE DAY ---------- */
+.city-day {
+  display:flex;
+  gap:30px;
+  background:white;
+  border-radius:15px;
+  padding:30px;
+  align-items:center;
+  transition: background .5s;
+}
+
+.city-day:hover {
+  background:#fff2d6;
+}
+
+.city-day img {
+  width:45%;
+  height:260px;
+  object-fit:cover;
+  border-radius:12px;
+}
+
+.city-info h3 {
+  font-family:'Noto Serif', serif;
+  color:var(--brown);
+  margin-bottom:10px;
+}
+
+.city-info ul {
+  margin-left:20px;
+}
+
+.city-info li {
+  margin-bottom:8px;
+}
+
+/* ---------- FORM ---------- */
+form {
+  max-width:500px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+input, textarea {
+  padding:12px;
+  border-radius:8px;
+  border:2px solid var(--brown);
+  font-size:1rem;
+  transition: border .3s, box-shadow .3s;
+}
+
+input:focus, textarea:focus {
+  outline:none;
+  border-color:var(--gold);
+  box-shadow:0 0 8px rgba(218,165,32,.6);
+}
+
+button {
+  padding:12px;
+  border:none;
+  background:var(--brown);
+  color:white;
+  font-size:1rem;
+  border-radius:8px;
+  cursor:pointer;
+  transition: background .3s, transform .3s;
+}
+
+button:hover {
+  background:var(--gold);
+  transform:translateY(-3px);
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background:var(--brown);
+  color:white;
+  text-align:center;
+  padding:20px;
+  margin-top:50px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Cultural Cities of Afghanistan</h1>
+  <p>Discover Afghan heritage through its cities</p>
+  <nav>
+    <a href="#gallery">Gallery</a>
+    <a href="#day">City of the Day</a>
+    <a href="#submit">Submit a City</a>
+  </nav>
+</header>
+
+<!-- ---------- GALLERY ---------- -->
+<section id="gallery">
+<h2>City Gallery</h2>
+
+<div class="gallery">
+
+<div class="city-card">
+<img src="Masjid 🕌.jpg">
+<div>
+<h3>Kabul</h3>
+<p>Capital city known for Babur’s Gardens and cultural diversity.</p>
+</div>
+</div>
+
+<div class="city-card">
+<img src="herat.jpg">
+<div>
+<h3>Herat</h3>
+<p>Famous for Persian art, poetry, and historic mosques.</p>
+</div>
+</div>
+
+<div class="city-card">
+<img src="Mazar-e Sharif Mosque.jpg">
+<div>
+<h3>Mazar-e-Sharif</h3>
+<p>Home of the Blue Mosque and Nawroz celebrations.</p>
+</div>
+</div>
+
+<div class="city-card">
+<img src="Bamyan .jpg">
+<div>
+<h3>Bamyan</h3>
+<p>Historic valley with cultural and natural heritage.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- ---------- CITY OF THE DAY ---------- -->
+<section id="day">
+<h2>City of the Day</h2>
+
+<div class="city-day">
+<img src="Herat jami mosque.jpg">
+
+<div class="city-info">
+<h3>Herat</h3>
+<ul>
+<li>Traditional foods: Ashak & Mantu</li>
+<li>Known for calligraphy and tile art</li>
+<li>Friday Mosque is a cultural landmark</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ---------- SUBMIT FORM ---------- -->
+<section id="submit">
+<h2>Submit a City</h2>
+
+<form>
+<input type="text" placeholder="Your Name">
+<input type="text" placeholder="City Name">
+<textarea rows="4" placeholder="Cultural Detail"></textarea>
+<button type="submit">Submit</button>
+</form>
+</section>
+
+<footer>
+© 2026 Cultural Cities of Afghanistan
+</footer>
+
+</body>
+</html>
